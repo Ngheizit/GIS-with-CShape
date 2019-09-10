@@ -9,25 +9,45 @@
         Title="我的世界" Height="450" Width="800" WindowState="Maximized" FontSize="14">
     <Grid>
         <esri:MapView x:Name="axMapView" WrapAroundMode="EnabledWhenSupported" Margin="0"/>
-        <Button x:Name="btn_symbolic" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="Buttons_Cilck"/>
+        <Button x:Name="btn_symbolic" Content="单一符号化" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Click="Buttons_Cilck"/>
 
         <GroupBox x:Name="gpbx_symbolic_simple" Header="单一符号化" Margin="0,0,10,0" HorizontalAlignment="Right" Width="201" Background="#7FFFFFFF">
             <StackPanel Margin="5">
                 <Label x:Name="label" Content="选择符号化图层："/>
-                <ComboBox x:Name="cbb_symbol_simple_SelectLayer"/>
+                <ComboBox x:Name="cbb_symbol_simple_SelectLayer" SelectionChanged="Combobox_SelectionChanged"/>
                 <Line Margin="5"></Line>
-                <Label x:Name="label2" Content="选择符号样式："/>
-                <ComboBox x:Name="cbb_symbol_simple_SelectStyle"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label x:Name="label2" Content="选择符号样式："/>
+                    <Label x:Name="label_symbol_simple_selectionstyle_outline" Content="边框样式：" Visibility="Hidden"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox x:Name="cbb_symbol_simple_SelectStyle" Width="108"/>
+                    <ComboBox x:Name="cbb_symbol_simple_SelectStyle_outline" Width="73" Visibility="Hidden"/>
+                </StackPanel>
                 <Line Margin="5"></Line>
                 <Label x:Name="label_symbol_simple_size" Content="调整符号大小：："/>
                 <Slider x:Name="slider_symbol_simple_size" Minimum="1" Maximum="72" Value="10" ValueChanged="Slider_ValueChanged"/>
                 <Line Margin="5"></Line>
-                <Label x:Name="label2_symbol_simple_color" Content="设置符号颜色：■"/>
-                <Slider x:Name="slider_symbol_simple_red" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" Background="#7FFF0000"/>
-                <Line Margin="2"></Line>
-                <Slider x:Name="slider_symbol_simple_green" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" Background="#7F00FF00"/>
-                <Line Margin="2"></Line>
-                <Slider x:Name="slider_symbol_simple_blue" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" Background="#7F0000FF"/>
+                <StackPanel Orientation="Horizontal">
+                    <Label x:Name="label2_symbol_simple_color" Content="符号颜色：■"/>
+                    <Label x:Name="label2_symbol_simple_color_oulline" Content="边框颜色：■" Visibility="Hidden"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" x:Name="StackPanel_symbol_simole_setColor" Width="180">
+                    <StackPanel>
+                        <Slider x:Name="slider_symbol_simple_red" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" Background="#7FFF0000"/>
+                        <Line Margin="2"></Line>
+                        <Slider x:Name="slider_symbol_simple_green" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" Background="#7F00FF00"/>
+                        <Line Margin="2"></Line>
+                        <Slider x:Name="slider_symbol_simple_blue" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" Background="#7F0000FF"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <Slider x:Name="slider_symbol_simple_red2" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" Background="#7FFF0000"/>
+                        <Line Margin="2"></Line>
+                        <Slider x:Name="slider_symbol_simple_green2" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" Background="#7F00FF00"/>
+                        <Line Margin="2"></Line>
+                        <Slider x:Name="slider_symbol_simple_blue2" Minimum="0" Maximum="255" ValueChanged="Slider_ValueChanged" Background="#7F0000FF"/>
+                    </StackPanel>
+                </StackPanel>
                 <Line Margin="5"></Line>
                 <Button x:Name="btn_symbol_simple_OK" Content="执行" Click="Buttons_Cilck"/>
                 <Line Margin="5"></Line>

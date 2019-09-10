@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 
 using Esri.ArcGISRuntime.Mapping;
 using Esri.ArcGISRuntime.Symbology;
+using Esri.ArcGISRuntime.Geometry;
 
 namespace NgheizitRuntime
 {
@@ -53,6 +54,8 @@ namespace NgheizitRuntime
             #endregion
         }
 
+
+        #region -----------------单一符号化-----------------
         #region 按钮点击事件
         private void Buttons_Cilck(object sender, RoutedEventArgs e)
         {
@@ -68,13 +71,6 @@ namespace NgheizitRuntime
                 {
                     cbb_symbol_simple_SelectLayer.Items.Add(axMapView.Map.OperationalLayers[i].Name);
                 }
-                cbb_symbol_simple_SelectStyle.Items.Clear();
-                cbb_symbol_simple_SelectStyle.Items.Add(SimpleMarkerSymbolStyle.Circle);
-                cbb_symbol_simple_SelectStyle.Items.Add(SimpleMarkerSymbolStyle.Cross);
-                cbb_symbol_simple_SelectStyle.Items.Add(SimpleMarkerSymbolStyle.Diamond);
-                cbb_symbol_simple_SelectStyle.Items.Add(SimpleMarkerSymbolStyle.Square);
-                cbb_symbol_simple_SelectStyle.Items.Add(SimpleMarkerSymbolStyle.Triangle);
-                cbb_symbol_simple_SelectStyle.Items.Add(SimpleMarkerSymbolStyle.X); 
                 #endregion
                 return;
 
@@ -85,19 +81,49 @@ namespace NgheizitRuntime
             {
                 int index = cbb_symbol_simple_SelectLayer.SelectedIndex; // 需要执行符号化的图层索引
                 FeatureLayer pFeatureLayer = axMapView.Map.OperationalLayers[index] as FeatureLayer;
-                SimpleMarkerSymbolStyle pSimpleMarkerSymbolStyle = (SimpleMarkerSymbolStyle)cbb_symbol_simple_SelectStyle.SelectedIndex;
                 #region 设置颜色及尺寸
                 byte r = (byte)slider_symbol_simple_red.Value;
                 byte g = (byte)slider_symbol_simple_green.Value;
                 byte b = (byte)slider_symbol_simple_blue.Value;
                 System.Drawing.Color color = System.Drawing.Color.FromArgb(r, g, b);
-                double size = slider_symbol_simple_size.Value; 
+                double size = slider_symbol_simple_size.Value;
                 #endregion
-                SimpleMarkerSymbol pSimpleMarkerSymbol = new SimpleMarkerSymbol(
-                    pSimpleMarkerSymbolStyle, color, size
-                );
-                SimpleRenderer pSimpleRenderer = new SimpleRenderer(pSimpleMarkerSymbol);
-                pFeatureLayer.Renderer = pSimpleRenderer;
+                GeometryType pGeometryType = pFeatureLayer.FeatureTable.GeometryType;
+                if (pGeometryType == GeometryType.Point) // 点状要素
+                {
+                    SimpleMarkerSymbolStyle pSimpleMarkerSymbolStyle = (SimpleMarkerSymbolStyle)cbb_symbol_simple_SelectStyle.SelectedIndex;
+                    SimpleMarkerSymbol pSimpleMarkerSymbol = new SimpleMarkerSymbol(
+                        pSimpleMarkerSymbolStyle, color, size
+                    );
+                    SimpleRenderer pSimpleRenderer = new SimpleRenderer(pSimpleMarkerSymbol);
+                    pFeatureLayer.Renderer = pSimpleRenderer;
+                }
+                else if (pGeometryType == GeometryType.Polyline)
+                {
+                    SimpleLineSymbolStyle pSimpleLineSymbolStyle = (SimpleLineSymbolStyle)cbb_symbol_simple_SelectStyle.SelectedIndex;
+                    SimpleLineSymbol pSimpleLineSymbol = new SimpleLineSymbol(
+                       pSimpleLineSymbolStyle, color, size
+                    );
+                    SimpleRenderer pSimpleRenderer = new SimpleRenderer(pSimpleLineSymbol);
+                    pFeatureLayer.Renderer = pSimpleRenderer;
+                }
+                else if (pGeometryType == GeometryType.Polygon)
+                {
+                    SimpleFillSymbolStyle pSimpleFillSymbolStyle = (SimpleFillSymbolStyle)cbb_symbol_simple_SelectStyle.SelectedIndex;
+                    byte r_outline = (byte)slider_symbol_simple_red2.Value;
+                    byte g_outline = (byte)slider_symbol_simple_green2.Value;
+                    byte b_outline = (byte)slider_symbol_simple_blue2.Value;
+                    System.Drawing.Color color_outline = System.Drawing.Color.FromArgb(r_outline, g_outline, b_outline);
+                    SimpleLineSymbolStyle pSimpleLineSymbolStyle = (SimpleLineSymbolStyle)cbb_symbol_simple_SelectStyle_outline.SelectedIndex;
+                    SimpleLineSymbol pSimpleLineSymbol_outline = new SimpleLineSymbol(
+                        pSimpleLineSymbolStyle, color_outline, size
+                    );
+                    SimpleFillSymbol pSimpleFillSymbol = new SimpleFillSymbol(
+                        pSimpleFillSymbolStyle, color, pSimpleLineSymbol_outline
+                    );
+                    SimpleRenderer pSimpleRenderer = new SimpleRenderer(pSimpleFillSymbol);
+                    pFeatureLayer.Renderer = pSimpleRenderer;
+                }
                 axMapView.Map.OperationalLayers[index] = pFeatureLayer; // 更新符号化图层
                 return;
             }
@@ -107,7 +133,7 @@ namespace NgheizitRuntime
             {
                 gpbx_symbolic_simple.Visibility = Visibility.Hidden; // 隐藏符号化功能区
                 return;
-            }  
+            }
             #endregion
             #endregion
         }
@@ -133,10 +159,94 @@ namespace NgheizitRuntime
                 byte g = (byte)slider_symbol_simple_green.Value;
                 byte b = (byte)slider_symbol_simple_blue.Value;
                 label2_symbol_simple_color.Foreground = new SolidColorBrush(Color.FromRgb(r, g, b));
-            }  
+            }
             #endregion
             #endregion
-        } 
+        }
         #endregion
+
+        #region Combobox选择项变化时间
+        private void Combobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if ((ComboBox)sender == cbb_symbol_simple_SelectLayer)
+            {
+                int index = cbb_symbol_simple_SelectLayer.SelectedIndex;
+                FeatureLayer pFeatureLayer = this.pMap.OperationalLayers[index] as FeatureLayer;
+                GeometryType pGeometryType = pFeatureLayer.FeatureTable.GeometryType;
+                double width;
+                switch (pGeometryType)
+                {
+                    case GeometryType.Point:
+                        cbb_symbol_simple_SelectStyle.Items.Clear();
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleMarkerSymbolStyle.Circle);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleMarkerSymbolStyle.Cross);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleMarkerSymbolStyle.Diamond);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleMarkerSymbolStyle.Square);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleMarkerSymbolStyle.Triangle);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleMarkerSymbolStyle.X);
+                        width = StackPanel_symbol_simole_setColor.Width;
+                        slider_symbol_simple_red.Width = width;
+                        slider_symbol_simple_green.Width = width;
+                        slider_symbol_simple_blue.Width = width;
+                        slider_symbol_simple_red2.Width = 0;
+                        slider_symbol_simple_green2.Width = 0;
+                        slider_symbol_simple_blue2.Width = 0;
+                        label2_symbol_simple_color_oulline.Visibility = Visibility.Hidden;
+                        label_symbol_simple_selectionstyle_outline.Visibility = Visibility.Hidden;
+                        cbb_symbol_simple_SelectStyle_outline.Visibility = Visibility.Hidden;
+                        break;
+                    case GeometryType.Polyline:
+                        cbb_symbol_simple_SelectStyle.Items.Clear();
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleLineSymbolStyle.Dash);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleLineSymbolStyle.DashDot);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleLineSymbolStyle.DashDotDot);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleLineSymbolStyle.Dot);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleLineSymbolStyle.Null);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleLineSymbolStyle.Solid);
+                        width = StackPanel_symbol_simole_setColor.Width;
+                        slider_symbol_simple_red.Width = width;
+                        slider_symbol_simple_green.Width = width;
+                        slider_symbol_simple_blue.Width = width;
+                        slider_symbol_simple_red2.Width = 0;
+                        slider_symbol_simple_green2.Width = 0;
+                        slider_symbol_simple_blue2.Width = 0;
+                        label2_symbol_simple_color_oulline.Visibility = Visibility.Hidden;
+                        label_symbol_simple_selectionstyle_outline.Visibility = Visibility.Hidden;
+                        cbb_symbol_simple_SelectStyle_outline.Visibility = Visibility.Hidden;
+                        break;
+                    case GeometryType.Polygon:
+                        cbb_symbol_simple_SelectStyle.Items.Clear();
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleFillSymbolStyle.BackwardDiagonal);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleFillSymbolStyle.Cross);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleFillSymbolStyle.DiagonalCross);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleFillSymbolStyle.ForwardDiagonal);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleFillSymbolStyle.Horizontal);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleFillSymbolStyle.Null);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleFillSymbolStyle.Solid);
+                        cbb_symbol_simple_SelectStyle.Items.Add(SimpleFillSymbolStyle.Vertical);
+                        width = StackPanel_symbol_simole_setColor.Width;
+                        slider_symbol_simple_red.Width = width / 2;
+                        slider_symbol_simple_green.Width = width / 2;
+                        slider_symbol_simple_blue.Width = width / 2;
+                        slider_symbol_simple_red2.Width = width / 2;
+                        slider_symbol_simple_green2.Width = width / 2;
+                        slider_symbol_simple_blue2.Width = width / 2;
+                        label2_symbol_simple_color_oulline.Visibility = Visibility.Visible;
+                        label_symbol_simple_selectionstyle_outline.Visibility = Visibility.Visible;
+                        cbb_symbol_simple_SelectStyle_outline.Visibility = Visibility.Visible;
+                        cbb_symbol_simple_SelectStyle_outline.Items.Clear();
+                        cbb_symbol_simple_SelectStyle_outline.Items.Add(SimpleLineSymbolStyle.Dash);
+                        cbb_symbol_simple_SelectStyle_outline.Items.Add(SimpleLineSymbolStyle.DashDot);
+                        cbb_symbol_simple_SelectStyle_outline.Items.Add(SimpleLineSymbolStyle.DashDotDot);
+                        cbb_symbol_simple_SelectStyle_outline.Items.Add(SimpleLineSymbolStyle.Dot);
+                        cbb_symbol_simple_SelectStyle_outline.Items.Add(SimpleLineSymbolStyle.Null);
+                        cbb_symbol_simple_SelectStyle_outline.Items.Add(SimpleLineSymbolStyle.Solid);
+                        break;
+                }
+            }
+        }  
+        #endregion
+        #endregion
+
     }
 }
