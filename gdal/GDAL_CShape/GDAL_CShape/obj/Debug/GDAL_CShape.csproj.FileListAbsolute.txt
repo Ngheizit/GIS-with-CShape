@@ -1,0 +1,15 @@
+D:\ngheizit\GDAL_CShape\GDAL_CShape\bin\Debug\GDAL_CShape.exe.config
+D:\ngheizit\GDAL_CShape\GDAL_CShape\bin\Debug\GDAL_CShape.exe
+D:\ngheizit\GDAL_CShape\GDAL_CShape\bin\Debug\GDAL_CShape.pdb
+D:\ngheizit\GDAL_CShape\GDAL_CShape\bin\Debug\gdalconst_csharp.dll
+D:\ngheizit\GDAL_CShape\GDAL_CShape\bin\Debug\gdal_csharp.dll
+D:\ngheizit\GDAL_CShape\GDAL_CShape\bin\Debug\ogr_csharp.dll
+D:\ngheizit\GDAL_CShape\GDAL_CShape\bin\Debug\osr_csharp.dll
+D:\ngheizit\GDAL_CShape\GDAL_CShape\obj\Debug\GDAL_CShape.csprojAssemblyReference.cache
+D:\ngheizit\GDAL_CShape\GDAL_CShape\obj\Debug\GDAL_CShape.Properties.Resources.resources
+D:\ngheizit\GDAL_CShape\GDAL_CShape\obj\Debug\GDAL_CShape.csproj.GenerateResource.cache
+D:\ngheizit\GDAL_CShape\GDAL_CShape\obj\Debug\GDAL_CShape.csproj.CoreCompileInputs.cache
+D:\ngheizit\GDAL_CShape\GDAL_CShape\obj\Debug\GDAL_CShape.csproj.CopyComplete
+D:\ngheizit\GDAL_CShape\GDAL_CShape\obj\Debug\GDAL_CShape.exe
+D:\ngheizit\GDAL_CShape\GDAL_CShape\obj\Debug\GDAL_CShape.pdb
+D:\ngheizit\GDAL_CShape\GDAL_CShape\obj\Debug\GDAL_CShape.FormMain.resources
