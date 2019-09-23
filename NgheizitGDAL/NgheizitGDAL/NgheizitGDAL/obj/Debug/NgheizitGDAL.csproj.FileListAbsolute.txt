@@ -1,0 +1,15 @@
+D:\githubprogram\ArcGISRuntimeNetLearning\NgheizitGDAL\NgheizitGDAL\NgheizitGDAL\obj\Debug\NgheizitGDAL.csprojAssemblyReference.cache
+D:\githubprogram\ArcGISRuntimeNetLearning\NgheizitGDAL\NgheizitGDAL\NgheizitGDAL\obj\Debug\NgheizitGDAL.Form1.resources
+D:\githubprogram\ArcGISRuntimeNetLearning\NgheizitGDAL\NgheizitGDAL\NgheizitGDAL\obj\Debug\NgheizitGDAL.Properties.Resources.resources
+D:\githubprogram\ArcGISRuntimeNetLearning\NgheizitGDAL\NgheizitGDAL\NgheizitGDAL\obj\Debug\NgheizitGDAL.csproj.GenerateResource.cache
+D:\githubprogram\ArcGISRuntimeNetLearning\NgheizitGDAL\NgheizitGDAL\NgheizitGDAL\obj\Debug\NgheizitGDAL.csproj.CoreCompileInputs.cache
+D:\githubprogram\ArcGISRuntimeNetLearning\NgheizitGDAL\NgheizitGDAL\NgheizitGDAL\bin\Debug\NgheizitGDAL.exe.config
+D:\githubprogram\ArcGISRuntimeNetLearning\NgheizitGDAL\NgheizitGDAL\NgheizitGDAL\bin\Debug\NgheizitGDAL.exe
+D:\githubprogram\ArcGISRuntimeNetLearning\NgheizitGDAL\NgheizitGDAL\NgheizitGDAL\bin\Debug\NgheizitGDAL.pdb
+D:\githubprogram\ArcGISRuntimeNetLearning\NgheizitGDAL\NgheizitGDAL\NgheizitGDAL\bin\Debug\gdalconst_csharp.dll
+D:\githubprogram\ArcGISRuntimeNetLearning\NgheizitGDAL\NgheizitGDAL\NgheizitGDAL\bin\Debug\gdal_csharp.dll
+D:\githubprogram\ArcGISRuntimeNetLearning\NgheizitGDAL\NgheizitGDAL\NgheizitGDAL\bin\Debug\ogr_csharp.dll
+D:\githubprogram\ArcGISRuntimeNetLearning\NgheizitGDAL\NgheizitGDAL\NgheizitGDAL\bin\Debug\osr_csharp.dll
+D:\githubprogram\ArcGISRuntimeNetLearning\NgheizitGDAL\NgheizitGDAL\NgheizitGDAL\obj\Debug\NgheizitGDAL.csproj.CopyComplete
+D:\githubprogram\ArcGISRuntimeNetLearning\NgheizitGDAL\NgheizitGDAL\NgheizitGDAL\obj\Debug\NgheizitGDAL.exe
+D:\githubprogram\ArcGISRuntimeNetLearning\NgheizitGDAL\NgheizitGDAL\NgheizitGDAL\obj\Debug\NgheizitGDAL.pdb
