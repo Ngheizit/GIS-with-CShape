@@ -10,15 +10,18 @@ using System.Windows.Forms;
 
 using System.IO;
 
+
 using OSGeo.OGR;
 
 namespace GDAL_CShape
 {
+    
+
     public partial class FormMain : Form
     {
 
         private double m_pMinX, m_pMaxX, m_pMinY, m_pMaxY;
-
+        private string m_path;
 
 
         public FormMain()
@@ -132,12 +135,12 @@ namespace GDAL_CShape
         #region 目录空间设置事件
         private void TreeView_Dir_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            string path = e.Node.Name;
-            tbx_showPath.Text = path;
-            if (path.Split('.')[path.Split('.').Length - 1] == "shp")
+            this.m_path = e.Node.Name;
+            tbx_showPath.Text = m_path;
+            if (m_path.Split('.')[m_path.Split('.').Length - 1] == "shp")
             {
-                string geomeInfo = GetVector_GeomeInfo(path);
-                double[] extent = GetVector_Extent(path);
+                string geomeInfo = GetVector_GeomeInfo(m_path);
+                double[] extent = GetVector_Extent(m_path);
                 rtbx_spactialRef.Text = String.Format("MinX: {0}; \nMaxX: {1}; \nMinY: {2}; \nMaxY: {3}; \n", extent[0], extent[1], extent[2], extent[3]);
                 //rtbx_spactialRef.Text = geomeInfo;
                 this.m_pMinX = extent[0];
@@ -219,7 +222,7 @@ namespace GDAL_CShape
                                 }
                                 i++;
                             }
-                            g.FillPolygon(Brushes.Black, points.ToArray(), System.Drawing.Drawing2D.FillMode.Winding);
+                            g.FillPolygon(Brushes.Red, points.ToArray(), System.Drawing.Drawing2D.FillMode.Winding);
                             g.DrawLines(new Pen(Brushes.White, 1), points.ToArray());
                         }
                     }
@@ -286,6 +289,31 @@ namespace GDAL_CShape
         #endregion
 
 
+        #region 在任务管理器中打开当前目录
+        private void Btn_openiInWindow_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo("Explorer.exe");
+            if (m_path.Split('.')[m_path.Split('.').Length - 1] == "shp")
+                System.Diagnostics.Process.Start("Explorer.exe", System.IO.Path.GetDirectoryName(this.m_path));
+            else
+                System.Diagnostics.Process.Start("Explorer.exe", this.m_path);
+        }
+        #endregion
+
+        #region 将Shapefile文件集压缩为Zip压缩包
+        private void Btn_shp2zip_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfg = new SaveFileDialog();
+            sfg.Title = "Save as";
+            sfg.Filter = "zip files (*.zip)|*.zip";
+            if (sfg.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        } 
+        #endregion
+
+        #region 绘制矢量数据
         private void e2m(ref double x, ref double y)
         {
 
@@ -335,6 +363,7 @@ namespace GDAL_CShape
 
             string xys = "x = " + x + ", " + y;
             footlabel_xy.Text = xys;
-        }
+        } 
+        #endregion
     }
 }

@@ -36,6 +36,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.footlabel_xy = new System.Windows.Forms.ToolStripStatusLabel();
             this.rtbx_loca = new System.Windows.Forms.RichTextBox();
+            this.btn_openiInWindow = new System.Windows.Forms.Button();
+            this.btn_shp2zip = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_shp)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +57,7 @@
             this.tbx_showPath.Location = new System.Drawing.Point(199, -1);
             this.tbx_showPath.Name = "tbx_showPath";
             this.tbx_showPath.ReadOnly = true;
-            this.tbx_showPath.Size = new System.Drawing.Size(763, 21);
+            this.tbx_showPath.Size = new System.Drawing.Size(674, 21);
             this.tbx_showPath.TabIndex = 2;
             // 
             // rtbx_spactialRef
@@ -102,17 +104,39 @@
             // 
             // rtbx_loca
             // 
-            this.rtbx_loca.Location = new System.Drawing.Point(666, 59);
+            this.rtbx_loca.Location = new System.Drawing.Point(666, 161);
             this.rtbx_loca.Name = "rtbx_loca";
-            this.rtbx_loca.Size = new System.Drawing.Size(296, 202);
+            this.rtbx_loca.Size = new System.Drawing.Size(296, 100);
             this.rtbx_loca.TabIndex = 8;
             this.rtbx_loca.Text = "";
+            // 
+            // btn_openiInWindow
+            // 
+            this.btn_openiInWindow.Location = new System.Drawing.Point(875, -1);
+            this.btn_openiInWindow.Name = "btn_openiInWindow";
+            this.btn_openiInWindow.Size = new System.Drawing.Size(99, 21);
+            this.btn_openiInWindow.TabIndex = 10;
+            this.btn_openiInWindow.Text = "open in folder";
+            this.btn_openiInWindow.UseVisualStyleBackColor = true;
+            this.btn_openiInWindow.Click += new System.EventHandler(this.Btn_openiInWindow_Click);
+            // 
+            // btn_shp2zip
+            // 
+            this.btn_shp2zip.Location = new System.Drawing.Point(863, 25);
+            this.btn_shp2zip.Name = "btn_shp2zip";
+            this.btn_shp2zip.Size = new System.Drawing.Size(111, 21);
+            this.btn_shp2zip.TabIndex = 11;
+            this.btn_shp2zip.Text = "shapefile to zip";
+            this.btn_shp2zip.UseVisualStyleBackColor = true;
+            this.btn_shp2zip.Click += new System.EventHandler(this.Btn_shp2zip_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 480);
+            this.Controls.Add(this.btn_shp2zip);
+            this.Controls.Add(this.btn_openiInWindow);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.rtbx_loca);
             this.Controls.Add(this.rtbx_test);
@@ -141,6 +165,8 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel footlabel_xy;
         private System.Windows.Forms.RichTextBox rtbx_loca;
+        private System.Windows.Forms.Button btn_openiInWindow;
+        private System.Windows.Forms.Button btn_shp2zip;
     }
 }
 
