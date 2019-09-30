@@ -1,0 +1,15 @@
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\bin\Debug\XizheGIS.exe.config
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\bin\Debug\XizheGIS.exe
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\bin\Debug\XizheGIS.pdb
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\XizheGIS.csprojAssemblyReference.cache
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\MainWindow.g.cs
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\App.g.cs
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\XizheGIS_MarkupCompile.cache
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\XizheGIS_MarkupCompile.lref
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\MainWindow.baml
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\XizheGIS.g.resources
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\XizheGIS.Properties.Resources.resources
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\XizheGIS.csproj.GenerateResource.cache
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\XizheGIS.csproj.CoreCompileInputs.cache
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\XizheGIS.exe
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\XizheGIS.pdb

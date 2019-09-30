@@ -43,3 +43,4 @@ D:\gitproj\gis2cshape\gdal\GDAL_CShape\GDAL_CShape\obj\Debug\GDAL_CShape.csproj.
 D:\gitproj\gis2cshape\gdal\GDAL_CShape\GDAL_CShape\obj\Debug\GDAL_CShape.csproj.CopyComplete
 D:\gitproj\gis2cshape\gdal\GDAL_CShape\GDAL_CShape\obj\Debug\GDAL_CShape.exe
 D:\gitproj\gis2cshape\gdal\GDAL_CShape\GDAL_CShape\obj\Debug\GDAL_CShape.pdb
+D:\gitproj\gis2cshape\gdal\GDAL_CShape\GDAL_CShape\bin\Debug\ICSharpCode.SharpZipLib.dll

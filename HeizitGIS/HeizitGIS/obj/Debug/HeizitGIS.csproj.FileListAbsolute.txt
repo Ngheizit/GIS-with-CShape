@@ -1,0 +1,10 @@
+D:\gitproj\gis2cshape\HeizitGIS\HeizitGIS\bin\Debug\HeizitGIS.exe.config
+D:\gitproj\gis2cshape\HeizitGIS\HeizitGIS\bin\Debug\HeizitGIS.exe
+D:\gitproj\gis2cshape\HeizitGIS\HeizitGIS\bin\Debug\HeizitGIS.pdb
+D:\gitproj\gis2cshape\HeizitGIS\HeizitGIS\obj\Debug\HeizitGIS.csprojAssemblyReference.cache
+D:\gitproj\gis2cshape\HeizitGIS\HeizitGIS\obj\Debug\HeizitGIS.Properties.Resources.resources
+D:\gitproj\gis2cshape\HeizitGIS\HeizitGIS\obj\Debug\HeizitGIS.csproj.GenerateResource.cache
+D:\gitproj\gis2cshape\HeizitGIS\HeizitGIS\obj\Debug\HeizitGIS.csproj.CoreCompileInputs.cache
+D:\gitproj\gis2cshape\HeizitGIS\HeizitGIS\obj\Debug\HeizitGIS.exe
+D:\gitproj\gis2cshape\HeizitGIS\HeizitGIS\obj\Debug\HeizitGIS.pdb
+D:\gitproj\gis2cshape\HeizitGIS\HeizitGIS\obj\Debug\HeizitGIS.FormMain.resources

@@ -52,7 +52,7 @@ namespace GDAL_CShape
         /// <summary>  
         /// 获取所有文件  
         /// </summary>  
-        /// <returns></returns>  
+        /// <returns></returns>
         public Hashtable GetAllFies(string dir)
         {
             Hashtable filesList = new Hashtable();

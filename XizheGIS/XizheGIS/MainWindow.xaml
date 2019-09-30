@@ -1,0 +1,22 @@
+﻿<Window x:Class="XizheGIS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XizheGIS"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded"
+        Background="#00ffffff"
+        AllowsTransparency="True"
+        WindowState="Maximized"
+        WindowStyle="None" ShowInTaskbar="False" Topmost="True">
+    <Grid>
+
+        <Border x:Name="border_bg" CornerRadius="100" Background="#75ff00ff" BorderThickness="1" HorizontalAlignment="Left" Height="111" Margin="104,83,0,0" VerticalAlignment="Top" Width="112" MouseDown="Controls_MouseDown" MouseMove="Controls_MouseMove" MouseUp="Button_MouseUp">
+            <StackPanel x:Name="panel_bg" Background="#00ffffff" Margin="-1" VerticalAlignment="Center">
+                <TextBlock x:Name="tbk_time" TextWrapping="Wrap" Text="00:00:00" TextAlignment="Center" FontFamily="Mistral" FontSize="28" Foreground="#000" FontWeight="Bold" TextDecorations="{x:Null}"/>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>
