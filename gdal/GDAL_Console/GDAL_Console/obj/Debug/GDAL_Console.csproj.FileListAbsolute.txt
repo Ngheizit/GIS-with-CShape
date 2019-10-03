@@ -1,0 +1,15 @@
+D:\gitproj\gis2cshape\gdal\GDAL_Console\GDAL_Console\bin\Debug\GDAL_Console.exe.config
+D:\gitproj\gis2cshape\gdal\GDAL_Console\GDAL_Console\bin\Debug\GDAL_Console.exe
+D:\gitproj\gis2cshape\gdal\GDAL_Console\GDAL_Console\bin\Debug\GDAL_Console.pdb
+D:\gitproj\gis2cshape\gdal\GDAL_Console\GDAL_Console\bin\Debug\gdalconst_csharp.dll
+D:\gitproj\gis2cshape\gdal\GDAL_Console\GDAL_Console\bin\Debug\gdal_csharp.dll
+D:\gitproj\gis2cshape\gdal\GDAL_Console\GDAL_Console\bin\Debug\ogr_csharp.dll
+D:\gitproj\gis2cshape\gdal\GDAL_Console\GDAL_Console\bin\Debug\osr_csharp.dll
+D:\gitproj\gis2cshape\gdal\GDAL_Console\GDAL_Console\obj\Debug\GDAL_Console.csprojAssemblyReference.cache
+D:\gitproj\gis2cshape\gdal\GDAL_Console\GDAL_Console\obj\Debug\GDAL_Console.FormMain.resources
+D:\gitproj\gis2cshape\gdal\GDAL_Console\GDAL_Console\obj\Debug\GDAL_Console.Properties.Resources.resources
+D:\gitproj\gis2cshape\gdal\GDAL_Console\GDAL_Console\obj\Debug\GDAL_Console.csproj.GenerateResource.cache
+D:\gitproj\gis2cshape\gdal\GDAL_Console\GDAL_Console\obj\Debug\GDAL_Console.csproj.CoreCompileInputs.cache
+D:\gitproj\gis2cshape\gdal\GDAL_Console\GDAL_Console\obj\Debug\GDAL_Console.csproj.CopyComplete
+D:\gitproj\gis2cshape\gdal\GDAL_Console\GDAL_Console\obj\Debug\GDAL_Console.exe
+D:\gitproj\gis2cshape\gdal\GDAL_Console\GDAL_Console\obj\Debug\GDAL_Console.pdb
