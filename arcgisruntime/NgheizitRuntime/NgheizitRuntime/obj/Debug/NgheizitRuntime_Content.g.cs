@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("gdalconfiguration.vb")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("atmosphere_accurate_ps.cso")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("atmosphere_accurate_vs.cso")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("atmosphere_textured_ps.cso")]

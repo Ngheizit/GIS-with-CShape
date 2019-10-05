@@ -22,6 +22,7 @@ namespace XizheGIS
     public partial class MainWindow : Window
     {
         private DispatcherTimer timer;
+
         private void ShowTimer(object sender, EventArgs e)
         {
             this.tbk_time.Text = DateTime.Now.ToString("hh:mm:ss");
@@ -30,7 +31,6 @@ namespace XizheGIS
         public MainWindow()
         {
             InitializeComponent();
-
             #region 启动Timer
             this.timer = new DispatcherTimer();
             this.timer.Tick += new EventHandler(ShowTimer);
@@ -39,9 +39,29 @@ namespace XizheGIS
             #endregion
         }
 
+        ContextMenu contextMenu = new ContextMenu();
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            border_menu.ContextMenu = contextMenu;
+            AddMenuItem("test", "Hello");
+            AddMenuItem("test2", "Hello");
+        }
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            switch((sender as MenuItem).Name)
+            {
+                case "test":
+                    MessageBox.Show("");
+                    break;
+            }
+        }
+        private void AddMenuItem(string id, string name)
+        {
+            MenuItem item = new MenuItem();
+            item.Name = id;
+            item.Header = name;
+            item.Click += MenuItem_Click;
+            contextMenu.Items.Add(item);
         }
 
 
