@@ -1,0 +1,33 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XizheGIS.Windows"
+        xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013" x:Class="XizheGIS.Windows.ChangeBasemapWindow"
+        mc:Ignorable="d"
+        Title="ChangeBasemapWindow" Height="450" Width="800">
+    <Grid>
+        <esri:MapView 
+            x:Name="axMapView"
+            WrapAroundMode="EnabledWhenSupported"/>
+        <Border HorizontalAlignment="Right" Width="232" Height="54" VerticalAlignment="Top"
+                Margin="0,10,10,0" Padding="5" Background="#75ffffff" CornerRadius="10">
+            <StackPanel>
+                <TextBlock Text="Select basemap"
+                           FontWeight="SemiBold"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,5"
+                           TextWrapping="Wrap" />
+                <ComboBox x:Name="BasemapChooser" 
+                          SelectionChanged="OnBasemapChooserSelectionChanged" />
+            </StackPanel>
+        </Border>
+
+        <Border Height="163" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="260"
+                Margin="10,0,0,30" Padding="5" Background="#75ffffff" CornerRadius="10">
+            <TextBox x:Name="tbx_info" TextWrapping="Wrap"
+                     Margin="5" Background="#33ffffff"/>
+        </Border>
+    </Grid>
+</Window>

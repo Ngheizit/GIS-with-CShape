@@ -31,6 +31,11 @@ namespace XizheGIS
         public MainWindow()
         {
             InitializeComponent();
+            string licenseKsy = "runtimelite,1000,rud2630151591,none,PM0RJAY3FP20463EM070";
+            Esri.ArcGISRuntime.ArcGISRuntimeEnvironment.SetLicense(licenseKsy);
+            GdalConfiguration.ConfigureGdal();
+            GdalConfiguration.ConfigureOgr();
+            OSGeo.GDAL.Gdal.AllRegister();
             #region 启动Timer
             this.timer = new DispatcherTimer();
             this.timer.Tick += new EventHandler(ShowTimer);
@@ -43,15 +48,22 @@ namespace XizheGIS
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             border_menu.ContextMenu = contextMenu;
-            AddMenuItem("test", "Hello");
-            AddMenuItem("test2", "Hello");
+            AddMenuItem("ChangeBasemapWindow", "示例：选择底图");
+            AddMenuItem("OpenWebMapWindow", "示例：显示网络地图");
+            AddMenuItem("Close", "关闭");
         }
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             switch((sender as MenuItem).Name)
             {
-                case "test":
-                    MessageBox.Show("");
+                case "ChangeBasemapWindow":
+                    new Windows.ChangeBasemapWindow().Show();
+                    break;
+                case "OpenWebMapWindow":
+                    new Windows.OpenWebMapWindow().Show();
+                    break;
+                case "Close":
+                    Application.Current.Shutdown();
                     break;
             }
         }

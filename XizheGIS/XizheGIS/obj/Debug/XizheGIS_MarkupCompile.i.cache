@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\gitproj\gis2cshape\XizheGIS\XizheGIS\App.xaml
-11151548125
+3-772651376
 203506751809
-7-1241300488
+9887997854
 20271698025
-MainWindow.xaml;
+MainWindow.xaml;Windows\ChangeBasemapWindow.xaml;Windows\OpenWebMapWindow.xaml;
 
-False
+True
 
