@@ -50,6 +50,7 @@ namespace XizheGIS
             border_menu.ContextMenu = contextMenu;
             AddMenuItem("ChangeBasemapWindow", "示例：选择底图");
             AddMenuItem("OpenWebMapWindow", "示例：显示网络地图");
+            AddMenuItem("AddFeaturesWindow", "示例：为要素类添加新要素");
             AddMenuItem("Close", "关闭");
         }
         private void MenuItem_Click(object sender, RoutedEventArgs e)
@@ -61,6 +62,9 @@ namespace XizheGIS
                     break;
                 case "OpenWebMapWindow":
                     new Windows.OpenWebMapWindow().Show();
+                    break;
+                case "AddFeaturesWindow":
+                    new Windows.AddFeaturesWindow().Show();
                     break;
                 case "Close":
                     Application.Current.Shutdown();

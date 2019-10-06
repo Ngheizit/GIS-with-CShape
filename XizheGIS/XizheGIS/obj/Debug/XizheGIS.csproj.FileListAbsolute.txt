@@ -269,3 +269,5 @@ D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\Windows\ChangeBasemapWindow.g.
 D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\Windows\ChangeBasemapWindow.baml
 D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\Windows\OpenWebMapWindow.g.cs
 D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\Windows\OpenWebMapWindow.baml
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\Windows\AddFeaturesWindow.g.cs
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\Windows\AddFeaturesWindow.baml
