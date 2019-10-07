@@ -12,8 +12,8 @@
         WindowStyle="None" ShowInTaskbar="False" Topmost="True">
     <Grid>
 
-        <Border x:Name="border_bg" CornerRadius="100" Background="#35000000" BorderThickness="1" HorizontalAlignment="Left" Height="110" Margin="118,73,0,0" VerticalAlignment="Top" Width="112" MouseDown="Controls_MouseDown" MouseMove="Controls_MouseMove" MouseUp="Button_MouseUp">
-            <Border x:Name="border_menu" Background="#35000000" CornerRadius="100">
+        <Border x:Name="border_bg" CornerRadius="100" Background="#20000311" BorderThickness="1" HorizontalAlignment="Left" Height="110" Margin="118,73,0,0" VerticalAlignment="Top" Width="112" MouseDown="Controls_MouseDown" MouseMove="Controls_MouseMove" MouseUp="Button_MouseUp">
+            <Border x:Name="border_menu" Background="#20000311" CornerRadius="100">
                 <StackPanel Background="#00ffffff" Margin="-1" VerticalAlignment="Center">
                     <TextBlock x:Name="tbk_time" TextWrapping="Wrap" Text="00:00:00" TextAlignment="Center" FontFamily="Mistral" FontSize="28" Foreground="#fff" FontWeight="Bold" TextDecorations="{x:Null}"/>
                 </StackPanel>

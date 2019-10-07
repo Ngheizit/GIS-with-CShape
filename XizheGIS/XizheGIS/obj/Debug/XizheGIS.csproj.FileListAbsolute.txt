@@ -1,7 +1,6 @@
 D:\gitproj\gis2cshape\XizheGIS\XizheGIS\bin\Debug\XizheGIS.exe.config
 D:\gitproj\gis2cshape\XizheGIS\XizheGIS\bin\Debug\XizheGIS.exe
 D:\gitproj\gis2cshape\XizheGIS\XizheGIS\bin\Debug\XizheGIS.pdb
-D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\XizheGIS.csprojAssemblyReference.cache
 D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\MainWindow.g.cs
 D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\App.g.cs
 D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\XizheGIS_MarkupCompile.cache
