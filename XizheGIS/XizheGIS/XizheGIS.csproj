@@ -85,6 +85,10 @@
     <Compile Include="Windows\OpenWebMapWindow.xaml.cs">
       <DependentUpon>OpenWebMapWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\WxzMapWindow.xaml.cs">
+      <DependentUpon>WxzMapWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WxzUtils.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -107,6 +111,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\OpenWebMapWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\WxzMapWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

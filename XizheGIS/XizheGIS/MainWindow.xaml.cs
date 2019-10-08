@@ -48,6 +48,7 @@ namespace XizheGIS
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             border_menu.ContextMenu = contextMenu;
+            AddMenuItem("WxzMapWindow", "我的地图");
             AddMenuItem("ChangeBasemapWindow", "示例：选择底图");
             AddMenuItem("OpenWebMapWindow", "示例：显示网络地图");
             AddMenuItem("AddFeaturesWindow", "示例：为要素类添加新要素");
@@ -57,6 +58,9 @@ namespace XizheGIS
         {
             switch((sender as MenuItem).Name)
             {
+                case "WxzMapWindow":
+                    new Windows.WxzMapWindow().Show();
+                    break;
                 case "ChangeBasemapWindow":
                     new Windows.ChangeBasemapWindow().Show();
                     break;

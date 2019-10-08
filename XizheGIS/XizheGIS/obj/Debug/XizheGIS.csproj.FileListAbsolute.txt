@@ -270,3 +270,6 @@ D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\Windows\OpenWebMapWindow.g.cs
 D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\Windows\OpenWebMapWindow.baml
 D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\Windows\AddFeaturesWindow.g.cs
 D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\Windows\AddFeaturesWindow.baml
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\XizheGIS.csprojAssemblyReference.cache
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\Windows\WxzMapWindow.g.cs
+D:\gitproj\gis2cshape\XizheGIS\XizheGIS\obj\Debug\Windows\WxzMapWindow.baml
