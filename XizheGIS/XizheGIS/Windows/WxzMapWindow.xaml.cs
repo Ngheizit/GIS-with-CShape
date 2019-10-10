@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 using Esri.ArcGISRuntime.Mapping;
+using Esri.ArcGISRuntime.Portal;
 
 namespace XizheGIS.Windows
 {
@@ -31,7 +32,7 @@ namespace XizheGIS.Windows
             // 初始化地图
             this.axMapView.Map = new Map(Basemap.CreateOpenStreetMap());
 
-            GetFeatureLayer("https://services9.arcgis.com/8vu5jgpRPi7NCKmE/arcgis/rest/services/hyda_mg/FeatureServer/0");
+            // GetFeatureLayer("https://services9.arcgis.com/8vu5jgpRPi7NCKmE/ArcGIS/rest/services/中国省级行政中心/FeatureServer/0");
 
         }
 
@@ -42,6 +43,31 @@ namespace XizheGIS.Windows
             this.axMapView.Map.OperationalLayers.Add(pFeatureLayer);
             this.axMapView.Map.InitialViewpoint = new Viewpoint(pFeatureLayer.FullExtent);
         }
+        public async void GetFeatureLayerById(string portalItemId)
+        {
+            ArcGISPortal portal = await ArcGISPortal.CreateAsync();
+            PortalItem portalItem = await PortalItem.CreateAsync(portal, portalItemId);
+            FeatureLayer pFeatureLayer = new FeatureLayer(portalItem, 0);
+            await pFeatureLayer.LoadAsync();
+            this.axMapView.Map.OperationalLayers.Add(pFeatureLayer);
+            this.axMapView.Map.InitialViewpoint = new Viewpoint(pFeatureLayer.FullExtent);
+        }
 
+
+        private void Tbx_cmd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                string cmd = tbx_cmd.Text;
+                string[] cmds = cmd.Split(' ');
+                switch (cmds[0])
+                {
+                    case "gfl":
+                        if (cmds[1] == "id") GetFeatureLayerById(cmds[2]);
+                        else GetFeatureLayer(cmds[1]);
+                        break;
+                }
+            }
+        }
     }
 }

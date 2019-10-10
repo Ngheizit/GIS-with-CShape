@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XizheGIS.Windows"
         mc:Ignorable="d"
-        Title="WxzMapWindow" Height="509.801" Width="907.641" Loaded="Window_Loaded">
+        Title="WxzMapWindow" Height="769.301" Width="924.141" Loaded="Window_Loaded">
     <Grid>
-        <esri:MapView x:Name="axMapView" WrapAroundMode="EnabledWhenSupported"/>
+        <esri:MapView x:Name="axMapView" WrapAroundMode="EnabledWhenSupported" Margin="0,0,0,190"/>
+        <TextBlock Background="#99000000" Foreground="#fff" x:Name="tbk_info" Margin="0,548,0,0" TextWrapping="Wrap"/>
+        <TextBox FontSize="16" Background="#99000000" Foreground="#fff" x:Name="tbx_cmd" TextWrapping="NoWrap" Height="22" VerticalAlignment="Bottom" KeyDown="Tbx_cmd_KeyDown" />
+        
     </Grid>
 </Window>
