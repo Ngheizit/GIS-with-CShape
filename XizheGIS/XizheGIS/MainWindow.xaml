@@ -5,14 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XizheGIS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded"
+        Title="MainWindow" Height="806.55" Width="1209.5" Loaded="Window_Loaded"
         Background="#00ffffff"
         AllowsTransparency="True"
-        WindowState="Maximized"
-        WindowStyle="None" ShowInTaskbar="False" Topmost="True">
+        WindowStyle="None" ShowInTaskbar="False" Topmost="True" WindowStartupLocation="Manual" WindowState="Maximized">
     <Grid>
 
-        <Border x:Name="border_bg" CornerRadius="100" Background="#20000311" BorderThickness="1" HorizontalAlignment="Left" Height="110" Margin="118,73,0,0" VerticalAlignment="Top" Width="112" MouseDown="Controls_MouseDown" MouseMove="Controls_MouseMove" MouseUp="Button_MouseUp">
+        <Border x:Name="border_bg" CornerRadius="100" Background="#20000311" BorderThickness="1" HorizontalAlignment="Left" Height="110" Margin="340,253,0,0" VerticalAlignment="Top" Width="112" MouseDown="Controls_MouseDown" MouseMove="Controls_MouseMove" MouseUp="Button_MouseUp">
             <Border x:Name="border_menu" Background="#20000311" CornerRadius="100">
                 <StackPanel Background="#00ffffff" Margin="-1" VerticalAlignment="Center">
                     <TextBlock x:Name="tbk_time" TextWrapping="Wrap" Text="00:00:00" TextAlignment="Center" FontFamily="Mistral" FontSize="28" Foreground="#fff" FontWeight="Bold" TextDecorations="{x:Null}"/>
