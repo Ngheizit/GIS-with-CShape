@@ -47,6 +47,12 @@ namespace XizheGIS
         ContextMenu contextMenu = new ContextMenu();
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            double height = this.Height;
+            double width = this.Width;
+            this.WindowState = WindowState.Normal;
+            this.Height = height;
+            this.Width = width;
+
             border_menu.ContextMenu = contextMenu;
             AddMenuItem("WxzMapWindow", "我的地图");
             AddMenuItem("ChangeBasemapWindow", "示例：选择底图");

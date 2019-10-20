@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:XizheGIS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="806.55" Width="1209.5" Loaded="Window_Loaded"
+        Title="MainWindow" Height="572.55" Width="867.5" Loaded="Window_Loaded"
         Background="#00ffffff"
         AllowsTransparency="True"
         WindowStyle="None" ShowInTaskbar="False" Topmost="True" WindowStartupLocation="Manual" WindowState="Maximized">
