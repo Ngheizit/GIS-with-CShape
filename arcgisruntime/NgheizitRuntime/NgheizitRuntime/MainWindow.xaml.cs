@@ -43,9 +43,9 @@ namespace NgheizitRuntime
 
             #region 初始图层加载
             NgheizitTools.AddFeatureLayersFromUrls(pMap,
-                    "https://services9.arcgis.com/8vu5jgpRPi7NCKmE/arcgis/rest/services/中国省级行政单元/FeatureServer/0", // Polygon
-                    "https://services9.arcgis.com/8vu5jgpRPi7NCKmE/ArcGIS/rest/services/中国行政界线/FeatureServer/0", // Polyline
-                    "https://services9.arcgis.com/8vu5jgpRPi7NCKmE/ArcGIS/rest/services/中国省级行政中心/FeatureServer/0" // Point
+                    "https://services9.arcgis.com/8vu5jgpRPi7NCKmE/arcgis/rest/services/BOUA_PJ/FeatureServer/0", // Polygon
+                    "https://services9.arcgis.com/8vu5jgpRPi7NCKmE/arcgis/rest/services/BOUL_PJ/FeatureServer/0", // Polyline
+                    "https://services9.arcgis.com/8vu5jgpRPi7NCKmE/arcgis/rest/services/BOUP_PJ/FeatureServer/0" // Point
                 );
             #endregion
 

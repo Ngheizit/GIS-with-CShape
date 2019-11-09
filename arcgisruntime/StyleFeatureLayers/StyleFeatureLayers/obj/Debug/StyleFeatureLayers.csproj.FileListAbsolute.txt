@@ -259,3 +259,9 @@ D:\ngheizit\ArcGISRuntimeCsharp\StyleFeatureLayers\StyleFeatureLayers\obj\Debug\
 D:\ngheizit\ArcGISRuntimeCsharp\StyleFeatureLayers\StyleFeatureLayers\obj\Debug\StyleFeatureLayers.csproj.CopyComplete
 D:\ngheizit\ArcGISRuntimeCsharp\StyleFeatureLayers\StyleFeatureLayers\obj\Debug\StyleFeatureLayers.exe
 D:\ngheizit\ArcGISRuntimeCsharp\StyleFeatureLayers\StyleFeatureLayers\obj\Debug\StyleFeatureLayers.pdb
+D:\gitproj\gis2cshape\arcgisruntime\StyleFeatureLayers\StyleFeatureLayers\obj\Debug\StyleFeatureLayers.csprojAssemblyReference.cache
+D:\gitproj\gis2cshape\arcgisruntime\StyleFeatureLayers\StyleFeatureLayers\obj\Debug\App.g.cs
+D:\gitproj\gis2cshape\arcgisruntime\StyleFeatureLayers\StyleFeatureLayers\obj\Debug\StyleFeatureLayers_Content.g.cs
+D:\gitproj\gis2cshape\arcgisruntime\StyleFeatureLayers\StyleFeatureLayers\obj\Debug\StyleFeatureLayers_MarkupCompile.cache
+D:\gitproj\gis2cshape\arcgisruntime\StyleFeatureLayers\StyleFeatureLayers\obj\Debug\StyleFeatureLayers.exe
+D:\gitproj\gis2cshape\arcgisruntime\StyleFeatureLayers\StyleFeatureLayers\obj\Debug\StyleFeatureLayers.pdb
