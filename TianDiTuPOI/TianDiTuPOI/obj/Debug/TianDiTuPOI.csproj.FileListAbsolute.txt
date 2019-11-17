@@ -1,0 +1,13 @@
+D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\bin\Debug\TianDiTuPOI.exe.config
+D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\bin\Debug\TianDiTuPOI.exe
+D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\bin\Debug\TianDiTuPOI.pdb
+D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\obj\Debug\TianDiTuPOI.csprojResolveAssemblyReference.cache
+D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\obj\Debug\MainWindow.baml
+D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\obj\Debug\MainWindow.g.cs
+D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\obj\Debug\App.g.cs
+D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\obj\Debug\TianDiTuPOI_MarkupCompile.cache
+D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\obj\Debug\TianDiTuPOI.g.resources
+D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\obj\Debug\TianDiTuPOI.Properties.Resources.resources
+D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\obj\Debug\TianDiTuPOI.csproj.GenerateResource.Cache
+D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\obj\Debug\TianDiTuPOI.exe
+D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\obj\Debug\TianDiTuPOI.pdb
