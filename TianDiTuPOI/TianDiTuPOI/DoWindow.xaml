@@ -1,0 +1,27 @@
+﻿<Window x:Class="TianDiTuPOI.DoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DoWindow" Height="300" Width="300" Icon="Img/MapMarker.ico" Topmost="True" AllowsTransparency="True" WindowStyle="None"
+        ShowInTaskbar="False"
+        WindowState="Maximized"
+        Background="#00000000" WindowStartupLocation="CenterOwner">
+    <Border CornerRadius="300" Background="#20000311" x:Name="border_bg" MouseDown="Controls_MouseDown" MouseMove="Controls_MouseMove" MouseUp="Button_MouseUp" Height="300" VerticalAlignment="Top" HorizontalAlignment="Left" Width="300">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Background="#75FFFFFF" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="105,6,0,0">
+                <Label x:Name="btn_ZoomIn" Height="40" Width="40" Margin="2" BorderBrush="{x:Null}" MouseDown="btn_Zoom_MouseDown">
+                    <Label.Background>
+                        <ImageBrush ImageSource="Img/ZoomIn.ico"/>
+                    </Label.Background>
+                </Label>
+                <Label x:Name="btn_ZoomOut" Height="40" Width="40" Margin="2" BorderBrush="{x:Null}" MouseDown="btn_Zoom_MouseDown">
+                    <Label.Background>
+                        <ImageBrush ImageSource="Img/ZoomOut.ico"/>
+                    </Label.Background>
+                </Label>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+                <Button x:Name="btn_DrawMapBound" Height="25" Width="75" Content="绘制范围" Background="White" Click="btn_DrawMapBound_Click" />
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>

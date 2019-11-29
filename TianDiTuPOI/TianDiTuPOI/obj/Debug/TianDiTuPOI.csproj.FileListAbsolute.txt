@@ -11,3 +11,5 @@ D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\obj\Debug\TianDiTuPOI.Properties.R
 D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\obj\Debug\TianDiTuPOI.csproj.GenerateResource.Cache
 D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\obj\Debug\TianDiTuPOI.exe
 D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\obj\Debug\TianDiTuPOI.pdb
+D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\obj\Debug\DoWindow.baml
+D:\gitproj\gis2cshape\TianDiTuPOI\TianDiTuPOI\obj\Debug\DoWindow.g.cs

@@ -1,0 +1,11 @@
+D:\gitproj\gis2cshape\TianDiTuAPI\TianDiTuAPI\bin\Debug\TianDiTuAPI.exe.config
+D:\gitproj\gis2cshape\TianDiTuAPI\TianDiTuAPI\bin\Debug\TianDiTuAPI.exe
+D:\gitproj\gis2cshape\TianDiTuAPI\TianDiTuAPI\bin\Debug\TianDiTuAPI.pdb
+D:\gitproj\gis2cshape\TianDiTuAPI\TianDiTuAPI\obj\Debug\TianDiTuAPI.csprojResolveAssemblyReference.cache
+D:\gitproj\gis2cshape\TianDiTuAPI\TianDiTuAPI\obj\Debug\TianDiTuAPI.FormMain.resources
+D:\gitproj\gis2cshape\TianDiTuAPI\TianDiTuAPI\obj\Debug\TianDiTuAPI.Properties.Resources.resources
+D:\gitproj\gis2cshape\TianDiTuAPI\TianDiTuAPI\obj\Debug\TianDiTuAPI.csproj.GenerateResource.Cache
+D:\gitproj\gis2cshape\TianDiTuAPI\TianDiTuAPI\obj\Debug\TianDiTuAPI.exe
+D:\gitproj\gis2cshape\TianDiTuAPI\TianDiTuAPI\obj\Debug\TianDiTuAPI.pdb
+D:\gitproj\gis2cshape\TianDiTuAPI\TianDiTuAPI\obj\Debug\TianDiTuAPI.FormApply.resources
+D:\gitproj\gis2cshape\TianDiTuAPI\TianDiTuAPI\obj\Debug\TianDiTuAPI.FormRuntime.resources

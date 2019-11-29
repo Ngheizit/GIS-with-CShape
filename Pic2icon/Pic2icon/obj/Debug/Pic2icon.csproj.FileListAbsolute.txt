@@ -1,0 +1,8 @@
+D:\gitproj\gis2cshape\Pic2icon\Pic2icon\bin\Debug\Pic2icon.exe.config
+D:\gitproj\gis2cshape\Pic2icon\Pic2icon\bin\Debug\Pic2icon.exe
+D:\gitproj\gis2cshape\Pic2icon\Pic2icon\bin\Debug\Pic2icon.pdb
+D:\gitproj\gis2cshape\Pic2icon\Pic2icon\obj\Debug\Pic2icon.Form1.resources
+D:\gitproj\gis2cshape\Pic2icon\Pic2icon\obj\Debug\Pic2icon.Properties.Resources.resources
+D:\gitproj\gis2cshape\Pic2icon\Pic2icon\obj\Debug\Pic2icon.csproj.GenerateResource.Cache
+D:\gitproj\gis2cshape\Pic2icon\Pic2icon\obj\Debug\Pic2icon.exe
+D:\gitproj\gis2cshape\Pic2icon\Pic2icon\obj\Debug\Pic2icon.pdb

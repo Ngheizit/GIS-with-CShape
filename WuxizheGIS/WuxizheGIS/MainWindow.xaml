@@ -1,0 +1,42 @@
+﻿<dx:ThemedWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013" x:Class="WuxizheGIS.MainWindow"
+        Title="希浙的GIS平台" Height="683" Width="1118" Loaded="ThemedWindow_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <dxr:RibbonControl Grid.Row="0" RibbonStyle="Office2010">
+            <dxr:RibbonControl.ToolbarItems>
+                <dxb:BarButtonItemLink BarItemName="newItem"/>
+            </dxr:RibbonControl.ToolbarItems>
+            <dxr:RibbonDefaultPageCategory>
+                <dxr:RibbonPage Caption="开始">
+                    <dxr:RibbonPageGroup Caption="图层">
+                        <dxb:BarButtonItem x:Name="btn_SelectBasemap" Content="新建底图" RibbonStyle="Large" Glyph="{dx:DXImage Image=DefaultMap_32x32.png}" LargeGlyph="{dx:DXImage Image=DefaultMap_32x32.png}" ItemClick="Btn_SelectBasemap_ItemClick"/>
+                    </dxr:RibbonPageGroup>
+                </dxr:RibbonPage>
+            </dxr:RibbonDefaultPageCategory>
+        </dxr:RibbonControl>
+        <dxr:RibbonStatusBarControl Grid.Row="2">
+            <dxr:RibbonStatusBarControl.RightItems>
+                <dxb:BarButtonItem x:Name="printItem" Content="Print" Glyph="{dx:DXImage Image=Print_16x16.png}"/>
+            </dxr:RibbonStatusBarControl.RightItems>
+        </dxr:RibbonStatusBarControl>
+        <dx:DXTabControl Grid.Row="1">
+            <dx:DXTabItem Header="二维视图">
+                <esri:MapView x:Name="AxMapView" Margin="-12,-12,-12,-12"/>
+            </dx:DXTabItem>
+            <dx:DXTabItem Header="三维视图">
+                <esri:SceneView Margin="-12,-12,-12,-12"/>
+            </dx:DXTabItem>
+        </dx:DXTabControl>
+    </Grid>
+</dx:ThemedWindow>

@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using ESRI.ArcGIS.esriSystem;
 using ESRI.ArcGIS.Controls;
 using ESRI.ArcGIS.Carto;
+using ESRI.ArcGIS.Geometry;
 
 namespace TianDiTuPOI
 {
@@ -26,6 +27,7 @@ namespace TianDiTuPOI
     {
         private AxLicenseControl licenseControl;
         private AxMapControl mapControl;
+        private DoWindow dowindow;
 
 
         private IMapControl2 m_pMapC2;
@@ -59,6 +61,16 @@ namespace TianDiTuPOI
                 m_pMapC2.Pan();
                 m_pMapC2.MousePointer = esriControlsMousePointer.esriPointerArrow;
             }
+            if (e.button == 1)
+            {
+                if (dowindow.IsDraw)
+                {
+                    m_pMapC2.MousePointer = esriControlsMousePointer.esriPointerCrosshair;
+                    IEnvelope pEnv = m_pMapC2.TrackRectangle();
+                    AeUtils.DrawEnvelope(pEnv);
+                    m_pMapC2.MousePointer = esriControlsMousePointer.esriPointerArrow;
+                }
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -67,7 +79,11 @@ namespace TianDiTuPOI
             m_pMapC2 = mapControl.GetOcx() as IMapControl2;
             m_pMapDoc = new MapDocumentClass();
 
+            AeUtils.SetMapControl(m_pMapC2);
             LoadMxd();
+
+            dowindow = new DoWindow(m_pMapC2);
+            dowindow.Show();
         }
 
         private void LoadMxd(string mxdPath = @"./Map.mxd")

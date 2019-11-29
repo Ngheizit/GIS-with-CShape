@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("mapmarker.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/zoomin.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/zoomout.ico")]
 
 
